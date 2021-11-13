@@ -7,3 +7,5 @@
     - name: print variables
       debug:
         msg: "Username: {{ username }}, Home dir: {{ home }}"
+        
+        
