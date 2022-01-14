@@ -11,6 +11,9 @@ ansible -i inventory.txt  -m service -a "name=nginx  state=restarted" --become  
 ansible -i inventory.txt -m file -a "path=/home/ubuntu/ansible state=directory" all
 ansible -i inventory.txt -m file -a "path=/home/ubuntu/sample.txt  state=touch" all
 ansible -i inventory.txt -m copy -a "src=/etc/hosts dest=/opt/hosts" all --become
+ansible -i inventory.txt -m group -a "name=unix state=present" all --become
+ansible -i inventory.txt -m group -a "name=unix state=absent" all --become
+
 
 
 
