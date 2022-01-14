@@ -1,0 +1,5 @@
+ansible -i inventory.txt  -a "free -m" all
+ansible -i inventory.txt  -a "df -hT -m" all
+ansible -i inventory.txt  -m command  -a "uptime" all
+ansible -i inventory.txt -m shell  -a "free -m" all
+ansible -i inventory.txt -m shell  -a "cat /etc/passwd" all
