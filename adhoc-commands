@@ -16,6 +16,7 @@ ansible -i inventory.txt -m group -a "name=unix state=absent" all --become
 ansible -i inventory.txt -m user -a "name=kajal state=present" all --become
 ansible -i inventory.txt -m user -a "name=kajal state=absent" all --become
 ansible -i inventory.txt   -m user -a "name=archana group=unix" all --become
+ansible -i inventory.txt -m shell -a "touch /home/ubuntu/file1.txt" all  --become
 
 
 
