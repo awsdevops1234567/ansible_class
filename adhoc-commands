@@ -13,6 +13,22 @@ ansible -i inventory.txt -m file -a "path=/home/ubuntu/sample.txt  state=touch" 
 ansible -i inventory.txt -m copy -a "src=/etc/hosts dest=/opt/hosts" all --become
 ansible -i inventory.txt -m group -a "name=unix state=present" all --become
 ansible -i inventory.txt -m group -a "name=unix state=absent" all --become
+ansible -i inventory.txt -m user -a "name=kajal state=present" all --become
+ansible -i inventory.txt -m user -a "name=kajal state=absent" all --become
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
