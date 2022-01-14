@@ -18,6 +18,7 @@ ansible -i inventory.txt -m user -a "name=kajal state=absent" all --become
 ansible -i inventory.txt   -m user -a "name=archana group=unix" all --become
 ansible -i inventory.txt -m shell -a "touch /home/ubuntu/file1.txt" all  --become
 ansible -i inventory.txt   -m user -a "name=archana password=unix@123" all --become
+ansible -i inventory.txt -m shell -a "systemctl status sshd" all  --become
 
 
 
