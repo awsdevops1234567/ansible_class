@@ -8,5 +8,8 @@ ansible -i inventory.txt  -m apt  -a "name=nginx  state=absent" --become  all
 ansible -i inventory.txt  -m service -a "name=nginx  state=started" --become  all
 ansible -i inventory.txt  -m service -a "name=nginx  state=stopped" --become  all
 ansible -i inventory.txt  -m service -a "name=nginx  state=restarted" --become  all
+ansible -i inventory.txt -m file -a "path=/home/ubuntu/ansible state=directory" all
+ansible -i inventory.txt -m file -a "path=/home/ubuntu/sample.txt  state=touch" all
+
 
 
